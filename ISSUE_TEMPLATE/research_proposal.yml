@@ -1,0 +1,33 @@
+name: Research Proposal
+description: Propose a new experiment, model architecture, or dataset.
+title: "[Research]: "
+labels: ["enhancement", "research"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What is the goal of this experiment?
+      placeholder: To improve Named Entity Recognition recall on legal documents.
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed Method / Paper
+      description: Describe the approach or link the reference paper.
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Evaluation Metrics
+      description: How will we measure success?
+      placeholder: F1-Score, Exact Match, Inference Latency (ms)
+    validations:
+      required: true
+  - type: textarea
+    id: resources
+    attributes:
+      label: Required Resources
+      description: Estimate compute resources (e.g., A100 GPU for 24 hours).
