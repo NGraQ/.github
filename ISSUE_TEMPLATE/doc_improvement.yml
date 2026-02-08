@@ -1,0 +1,24 @@
+name: Documentation Gap
+description: Report missing, confusing, or outdated documentation.
+title: "[Docs]: "
+labels: ["documentation", "good-first-issue"]
+body:
+  - type: input
+    id: section
+    attributes:
+      label: Section / Page
+      placeholder: Installation Guide / API Reference
+    validations:
+      required: true
+  - type: textarea
+    id: confusion
+    attributes:
+      label: What is unclear?
+      description: Explain what information is missing or misleading.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Change
+      description: Provide the correct text or example if you know it.

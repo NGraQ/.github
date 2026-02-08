@@ -1,0 +1,40 @@
+name: Data Quality Issue
+description: Report errors, biases, or inconsistencies in datasets.
+title: "[Data]: "
+labels: ["data-quality", "urgent"]
+body:
+  - type: input
+    id: dataset_version
+    attributes:
+      label: Dataset Version / Name
+      description: Which dataset or partition are you referring to?
+      placeholder: legal-corpus-v1.2 / train_split
+    validations:
+      required: true
+  - type: textarea
+    id: issue_desc
+    attributes:
+      label: Issue Description
+      description: Describe the data anomaly (e.g., misaligned labels, corrupted files).
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Specific Examples (IDs / Indices)
+      description: List the IDs or indices of the bad data samples.
+      placeholder: |
+        - ID: 1045 (Wrong Entity Label)
+        - ID: 5092 (Text contains HTML tags)
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical (Affects Model Performance)
+        - Moderate (Minor Noise)
+        - Suggestion (Improvement)
+    validations:
+      required: true

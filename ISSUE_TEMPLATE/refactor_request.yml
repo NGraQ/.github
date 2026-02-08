@@ -1,0 +1,24 @@
+name: Code Refactoring
+description: Suggest improvements for code readability, performance, or structure.
+title: "[Refactor]: "
+labels: ["tech-debt", "maintenance"]
+body:
+  - type: input
+    id: file_path
+    attributes:
+      label: File / Module
+      placeholder: src/models/encoder.py
+    validations:
+      required: true
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Implementation
+      description: Why is the current code problematic? (e.g., hardcoded values, O(n^2) complexity).
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Improvement
+      description: How should we rewrite it? (e.g., Use vectorization instead of loops).
